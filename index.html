@@ -14,20 +14,27 @@
     </header>
 
     <section class="game-area">
-        <div id="player-choice">
-            <h2>Click button to make your choice</h2>
-            <button aria-label="rock" data-pick="0" class="myButton"></button>
-            <button aria-label="paper" data-pick="1" class="myButton"></button>
-            <button aria-label="scissors" data-pick="2" class="myButton"></button>
-            <button aria-label="lizard" data-pick="3" class="myButton"></button>
-            <button aria-label="spock" data-pick="4" class="myButton"></button>
+        <div id="game-heading">
+            <h2>Click button to make your choice</h2><br>
         </div>
-        <div>
-
+        <div id="player-choice">            
+            <button aria-label="rock" data-pick="0" class="myButton">Rock</button>
+            <button aria-label="paper" data-pick="1" class="myButton">Paper</button>
+            <button aria-label="scissors" data-pick="2" class="myButton">Scissors</button>
+            <button aria-label="lizard" data-pick="3" class="myButton">Lizard</button>
+            <button aria-label="spock" data-pick="4" class="myButton">Spock</button>
         </div>
-
-
-
+        <br>
+        <div id="feedback">
+            <div class="myPlayer">
+                <img id="player-image" src="assets/images/rpsls.png" alt="Rock Paper Scissors Lizard Spock">
+                <h3>Player Score: <span id="player-score">0</span></h3>
+            </div>
+            <div class="myComputer">
+                <img id="computer-image" src="assets/images/rpsls.png" alt="Rock Paper Scissors Lizard Spock">
+                <h3>Computer Score: <span id="system-score">0</span></h3>
+            </div>
+        </div>
     </section>
 
 

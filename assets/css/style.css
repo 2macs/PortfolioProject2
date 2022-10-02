@@ -1,6 +1,10 @@
 /* Import cool fonts, Lato one of the most commonly used */
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;1,300&family=Oswald&display=swap');
 
+body{
+    font-family:"Raleway", sans-serif;
+}
+
 
 /* Style the header */
 header {
@@ -9,8 +13,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;   
-    background-color: lightslategrey; 
-    
+    background-color: lightslategrey;     
     border: 1px solid black;
 }
 
@@ -18,11 +21,12 @@ header {
     font-family: "Raleway", sans-serif;
     color: rgba(0, 0, 0, 1);
     /* black text */
-    width: 50%;
+   
 }
 
 #myHeader h1 {
     font-size: 2.5rem;  /* header stand out */
+    font-family: "Raleway",sans-serif;
 }
 
 /* style the footer , plan for responsiveness */
@@ -37,4 +41,32 @@ footer{
     width: 100vw;
     padding-top: 40px;
     color: #fff;
+}
+
+
+#feedback {
+    display: flex;
+    justify-content: center;
+}
+#game-heading > h2 {
+    text-align: center;
+    width: 40%;
+    margin: auto;
+}
+
+#player-choice{
+    display: flex;
+    width: 40%;
+    margin:auto;    
+    border: 1px solid black;
+    justify-content: space-between;
+   
+}
+#player-choice button{
+    margin-left: 10px;    
+    align-items: center;   
+    font-family: "Raleway", sans-serif;
+    font-size: 1.2rem;
+    height:2.5rem ;
+    border-radius: 10px;
 }
