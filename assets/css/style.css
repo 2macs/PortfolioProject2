@@ -1,0 +1,19 @@
+/* Style the header */
+header {
+    width: 100%;
+    height: 100px;
+    justify-content: center;
+    margin-bottom: 10px;
+    display: flex;
+}
+
+#myHeader {
+    font-family: Lato, sans-serif;
+    color: rgba(0, 0, 0, 1);
+    /* black text */
+    width: 50%;
+}
+
+#myHeader h1 {
+    font-size: 2em;  /* header stand out */
+}
