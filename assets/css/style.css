@@ -3,6 +3,7 @@
 
 body{
     font-family:"Raleway", sans-serif;
+   
 }
 
 
@@ -17,37 +18,59 @@ header {
     border: 1px solid black;
 }
 
-#myHeader {
-    font-family: "Raleway", sans-serif;
-    color: rgba(0, 0, 0, 1);
-    /* black text */
-   
+#myHeader {    
+    color: rgba(0, 0, 0, 1);    
+    font-size: 1em;   
 }
 
 #myHeader h1 {
-    font-size: 2.5rem;  /* header stand out */
+    font-size: 10rem;  /* header stand out */
     font-family: "Raleway",sans-serif;
+}
+#game-heading h2 {
+    font-size: 2rem;
 }
 
 /* style the footer , plan for responsiveness */
 
 footer{
-    position: absolute;
+    position: relative;
     bottom: 0;
     left: 0;
     right: 0;
     background: #111;
     height: auto;
-    width: 100vw;
-    padding-top: 40px;
+    padding-top: 10px;
     color: #fff;
+}
+#myfooter h3 {
+    font-size: 1rem;
+    text-align: center;
+}
+#myfooter p {
+    font-size: 0.8rem;
 }
 
 
 #feedback {
     display: flex;
     justify-content: center;
+    background-color: #92A8D1;    
 }
+#feedback img {
+    width:70%;
+    height:70%;
+    padding-top: 0.5rem;
+    }
+
+    .myPlayer {
+        
+        text-align: center;
+    }
+    .myComputer {
+        
+        text-align: center;
+    }
 #game-heading > h2 {
     text-align: center;
     width: 40%;
@@ -66,7 +89,18 @@ footer{
     margin-left: 10px;    
     align-items: center;   
     font-family: "Raleway", sans-serif;
-    font-size: 1.2rem;
-    height:2.5rem ;
+    font-size: 1em;
+    height:2em ;
     border-radius: 10px;
+}
+
+@media (max-width: 414px) {
+    #player-choice {
+        width: 100%;
+        justify-content:space-evenly;
+    }
+    #game-heading h2 {
+        font-size: 1rem;
+        text-align: left;
+    }
 }
