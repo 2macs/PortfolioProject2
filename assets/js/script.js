@@ -6,7 +6,10 @@ const computerScore = document.getElementById("system-score"); //access computer
 const playerImage = document.getElementById("player-image" );  // image will change per user selection
 const computerImage = document.getElementById("computer-image"); //image will change per random selection for computer
 const winnerMessage = document.getElementById("winner-message"); //Output message to user
+const gameTracker = document.getElementById("current-game");
 var options=['rock','paper','scissors','lizard','spock']; //use to get / change image to display
+var playerWins = 0;
+var computerWins = 0;
 
 
 let gameCount = document.getElementById('best-of');
@@ -49,8 +52,18 @@ function runGame(playerChoice){
             winnerMessage.innerHTML = 'Its a tie, please play again';
         } else if (result == 1){  // Player wins
             winnerMessage.innerHTML = 'Player wins !';
+            //increment player score
+            playerWins += 1; //increment by one because player just won this game
+            playerScore.innerText = playerWins; // write the new score to the DOM
+
+            currentGame +=1;
+            gameTracker.innerHTML = currentGame;
         } else if (result == 2){  // Computer wins
             winnerMessage.innerHTML = 'Computer wins !';
+            computerWins += 1; //increment by one because computer just won this game
+            computerScore.innerText = computerWins; // write the new score to the DOM
+            currentGame += 1;
+            gameTracker.innerHTML = currentGame;
         }
 
 }
@@ -66,6 +79,7 @@ function winCalc(playerChoice,computerChoice){
     } else if (playerChoice == 0){  // Player selects rock
         if (computerChoice == 2 || computerChoice == 3){
             return 1; // Player wins
+
         }
         else{
             return 2; //Computer wins
