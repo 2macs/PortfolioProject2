@@ -6,6 +6,7 @@ const computerScore = document.getElementById("system-score"); //access computer
 const playerImage = document.getElementById("player-image" );  // image will change per user selection
 const computerImage = document.getElementById("computer-image"); //image will change per random selection for computer
 const winnerMessage = document.getElementById("winner-message"); //Output message to user
+var options=['rock','paper','scissors','lizard','spock']; //use to get / change image to display
 
 
 let gameCount = document.getElementById('best-of');
@@ -25,6 +26,21 @@ for (button of gameButtons){
     })
 }
 
-function runGame(){
-    console.log("Game has been called");
+/**
+ * This is the main game function, player choice is known. 
+ */
+function runGame(playerChoice){
+    //console.log("Game has been called, Player choice is " + playerChoice);
+    //change player image to reflect player selection
+    playerImage.src = `assets/images/${options[playerChoice]}.PNG`;
+    playerImage.alt = options[playerChoice];
+
+    //Next get the computer choice, random number between 0 and 4
+    let computerChoice = Math.floor(Math.random()*5);
+    console.log(computerChoice);
+
+    //next change the computer image to refelct the computer selection
+    computerImage.src = `assets/images/${options[computerChoice]}.PNG`;
+    computerImage.alt = options[computerChoice];
+
 }
