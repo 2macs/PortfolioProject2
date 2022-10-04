@@ -11,3 +11,20 @@ const winnerMessage = document.getElementById("winner-message"); //Output messag
 let gameCount = document.getElementById('best-of');
 gameCount.innerHTML = bestOfThree;
 console.log(gameCount.innerHTML);
+
+//First we will get the choice made by the player that is what button did the user click?
+/**
+ * Add event listener to buttons to get player choice.
+ */
+for (button of gameButtons){
+    button.addEventListener('click',function() {
+        let playerChoice = this.getAttribute('data-pick');
+        console.log(playerChoice);
+        //start the game
+        runGame(playerChoice);
+    })
+}
+
+function runGame(){
+    console.log("Game has been called");
+}
