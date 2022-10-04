@@ -45,6 +45,13 @@ function runGame(playerChoice){
     // establish who won and deal with ties , call winCalc function   
     let result = winCalc(playerChoice,computerChoice);
     console.log(result);
+        if (result == 0) {//its a tie
+            winnerMessage.innerHTML = 'Its a tie, please play again';
+        } else if (result == 1){  // Player wins
+            winnerMessage.innerHTML = 'Player wins !';
+        } else if (result == 2){  // Computer wins
+            winnerMessage.innerHTML = 'Computer wins !';
+        }
 
 }
 
