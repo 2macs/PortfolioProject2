@@ -6,6 +6,7 @@ const computerScore = document.getElementById("system-score"); //access computer
 const playerImage = document.getElementById("player-image" );  // image will change per user selection
 const computerImage = document.getElementById("computer-image"); //image will change per random selection for computer
 const winnerMessage = document.getElementById("winner-message"); //Output message to user
+const overAllWinner = document.getElementById("game-heading"); //Output overall winner message
 const gameTracker = document.getElementById("current-game");
 var options=['rock','paper','scissors','lizard','spock']; //use to get / change image to display
 var playerWins = 0;
@@ -21,19 +22,20 @@ console.log(gameCount.innerHTML);
  * Add event listener to buttons to get player choice.
  */
 
-    for (button of gameButtons){
-        button.addEventListener('click',function() {
+    for (button of gameButtons){              
+            button.addEventListener('click',function() {
             let playerChoice = this.getAttribute('data-pick');    
         
-        if(currentGame < gameCount.innerHTML){
-            //start the game
-        runGame(playerChoice);
-        console.log(currentGame + ',' + gameCount.innerHTML);        
-    } else {
-        alert('GameOver');
-        } })
-        
-}
+                if(currentGame < gameCount.innerHTML){
+                    //start the game
+                    runGame(playerChoice);
+                    console.log(currentGame + ',' + gameCount.innerHTML); 
+                }else if (currentGame == gameCount.innerHTML){
+                    endgame();
+                } else {alert('Something went wrong, try again');} })
+     }     
+
+
  
 
 
@@ -125,4 +127,17 @@ function winCalc(playerChoice,computerChoice){
         winnerMessage.innerText = "Problem with game, please try again";
     }
 
+}
+
+function endgame(){
+    alert('GameOver' + 'pLAYER SCORE IS '+playerScore.innerText + 'Computer score is ' + computerScore.innerText);
+    //disable buttons, prevent user from continuing
+    for (button of gameButtons){
+    button.setAttribute('disabled',1);}
+
+    if (playerScore.innerText > computerScore.innerText){
+        overAllWinner.innerText = ' PLAYER WINS! Refresh page to continue';
+    } else {
+        overAllWinner.innerText = ' COMPUTER WINS! Refresh page to continue';
+    }
 }
