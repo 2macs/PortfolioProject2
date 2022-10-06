@@ -17,12 +17,15 @@ let gameCount = document.getElementById('best-of');
 gameCount.innerHTML = bestOfThree;
 console.log(gameCount.innerHTML);
 
+main();
+
 //First we will get the choice made by the player that is what button did the user click?
 /**
  * Add event listener to buttons to get player choice.
  */
-
-    for (button of gameButtons){              
+    function main(){    
+    
+    for (button of gameButtons){         
             button.addEventListener('click',function() {
             let playerChoice = this.getAttribute('data-pick');    
         
@@ -30,17 +33,16 @@ console.log(gameCount.innerHTML);
                     //start the game
                     runGame(playerChoice);
                     console.log(currentGame + ',' + gameCount.innerHTML); 
-                }else if (currentGame == gameCount.innerHTML){
-                    endgame();
-                } else {alert('Something went wrong, try again');} })
-     }     
-
-
- 
+                    
+                }else 
+                     {alert('Something went wrong, try again');} 
+            }) 
+            }
+    } 
 
 
 /**
- * This is the main game function, player choice is known. 
+ * This is the run game function, player choice is known. 
  */
 function runGame(playerChoice){
     
@@ -65,16 +67,18 @@ function runGame(playerChoice){
             //increment player score
             playerWins += 1; //increment by one because player just won this game
             playerScore.innerText = playerWins; // write the new score to the DOM
-
             currentGame +=1;
-            gameTracker.innerHTML = currentGame;
-        } else if (result == 2){  // Computer wins
+            gameTracker.innerHTML = currentGame;                
+                }
+         else if (result == 2){  // Computer wins
             winnerMessage.innerHTML = 'Computer wins !';
             computerWins += 1; //increment by one because computer just won this game
             computerScore.innerText = computerWins; // write the new score to the DOM
             currentGame += 1;
-            gameTracker.innerHTML = currentGame;
+            gameTracker.innerHTML = currentGame;            
         }
+        if(currentGame == gameCount.innerHTML){
+            endgame();}
 
 }
 
@@ -130,7 +134,7 @@ function winCalc(playerChoice,computerChoice){
 }
 
 function endgame(){
-    alert('GameOver' + 'pLAYER SCORE IS '+playerScore.innerText + 'Computer score is ' + computerScore.innerText);
+    //alert('GameOver' + 'pLAYER SCORE IS '+playerScore.innerText + 'Computer score is ' + computerScore.innerText);
     //disable buttons, prevent user from continuing
     for (button of gameButtons){
     button.setAttribute('disabled',1);}
