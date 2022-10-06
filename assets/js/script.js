@@ -20,14 +20,22 @@ console.log(gameCount.innerHTML);
 /**
  * Add event listener to buttons to get player choice.
  */
-for (button of gameButtons){
-    button.addEventListener('click',function() {
-        let playerChoice = this.getAttribute('data-pick');
+
+    for (button of gameButtons){
+        button.addEventListener('click',function() {
+            let playerChoice = this.getAttribute('data-pick');    
         
-        //start the game
+        if(currentGame < gameCount.innerHTML){
+            //start the game
         runGame(playerChoice);
-    })
+        console.log(currentGame + ',' + gameCount.innerHTML);        
+    } else {
+        alert('GameOver');
+        } })
+        
 }
+ 
+
 
 /**
  * This is the main game function, player choice is known. 
