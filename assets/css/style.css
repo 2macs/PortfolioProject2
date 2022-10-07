@@ -17,17 +17,14 @@ header {
     border: 1px solid black;
 }
 
-#myHeader {    
-    color: rgba(0, 0, 0, 1);    
-    font-size: 1em;   
+#myHeader {
+    margin-bottom: 5px;    
 }
 
+
 #myHeader h1 {
-    font-size: 10rem;  /* header stand out */
+    font-size: 2rem;  /* header stand out */
     font-family: "Raleway",sans-serif;
-}
-#game-heading h2 {
-    font-size: 2rem;
 }
 
 /* style the footer , plan for responsiveness */
@@ -70,17 +67,25 @@ footer{
         
         text-align: center;
     }
+
+#game-heading{
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
 #game-heading > h2 {
-    text-align: center;
-    width: 40%;
-    margin: auto;
+    text-align: center;  
+    color: lawngreen;
+    font-size: 2rem;
+    font-weight: 900;       
 }
 
 #player-choice{
     display: flex;
     width: 40%;
-    margin:auto;    
-    border: 1px solid black;
+    margin:auto;        
     justify-content: space-between;
    
 }
@@ -100,6 +105,9 @@ footer{
     }
     #game-heading h2 {
         font-size: 1rem;
-        text-align: left;
+        text-align: center;
+    }
+    #myHeader h1 {
+        text-align: center;
     }
 }
