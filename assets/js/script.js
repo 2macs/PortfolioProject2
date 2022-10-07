@@ -48,6 +48,9 @@ function runGame(playerChoice){
     
     //change player image to reflect player selection
     playerImage.src = `assets/images/${options[playerChoice]}.PNG`;
+    playerImage.style.width = '160px';
+    playerImage.style.height = '180px';
+    playerImage.style.objectFit = 'cover';
     playerImage.alt = options[playerChoice];
 
     //Next get the computer choice, random number between 0 and 4
@@ -55,6 +58,9 @@ function runGame(playerChoice){
     
     //next change the computer image to refelct the computer selection
     computerImage.src = `assets/images/${options[computerChoice]}.PNG`;
+    computerImage.style.width = '160px';
+    computerImage.style.height = '180px';
+    computerImage.style.objectFit = 'cover';
     computerImage.alt = options[computerChoice];
 
     // establish who won and deal with ties , call winCalc function   
