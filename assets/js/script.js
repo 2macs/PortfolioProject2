@@ -51,6 +51,7 @@ function runGame(playerChoice){
     playerImage.style.width = '160px';
     playerImage.style.height = '180px';
     playerImage.style.objectFit = 'cover';
+    playerImage.style.color = 'blue';
     playerImage.alt = options[playerChoice];
 
     //Next get the computer choice, random number between 0 and 4
@@ -65,11 +66,13 @@ function runGame(playerChoice){
 
     // establish who won and deal with ties , call winCalc function   
     let result = winCalc(playerChoice,computerChoice);
-    console.log(result);
+        
         if (result == 0) {//its a tie
             winnerMessage.innerHTML = 'Its a tie, please play again';
+            winnerMessage.style.color = 'orange';
         } else if (result == 1){  // Player wins
             winnerMessage.innerHTML = 'Player wins !';
+            winnerMessage.style.color = 'blue';
             //increment player score
             playerWins += 1; //increment by one because player just won this game
             playerScore.innerText = playerWins; // write the new score to the DOM
@@ -78,6 +81,7 @@ function runGame(playerChoice){
                 }
          else if (result == 2){  // Computer wins
             winnerMessage.innerHTML = 'Computer wins !';
+            winnerMessage.style.color = 'red';
             computerWins += 1; //increment by one because computer just won this game
             computerScore.innerText = computerWins; // write the new score to the DOM
             currentGame += 1;
@@ -147,7 +151,12 @@ function endgame(){
 
     if (playerScore.innerText > computerScore.innerText){
         overAllWinner.innerText = ' PLAYER WINS! Refresh page to continue';
+        overAllWinner.style.fontSize = '2rem';
+        overAllWinner.style.color = 'blue';
     } else {
         overAllWinner.innerText = ' COMPUTER WINS! Refresh page to continue';
+        overAllWinner.style.fontSize = '2rem';
+        overAllWinner.style.color = 'red';
+
     }
 }

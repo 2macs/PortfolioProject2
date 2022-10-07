@@ -3,18 +3,20 @@
 
 body{
     font-family:"Raleway", sans-serif;   
+    border: 1px solid black;
+    padding-bottom: 0%;
 }
 
 
 /* Style the header */
 header {
-    width: 100%;
+    width: auto;
     height: 100px;
     display: flex;
     justify-content: center;
     align-items: center;   
     background-color: lightslategrey;     
-    border: 1px solid black;
+   
 }
 
 #myHeader {
@@ -30,10 +32,7 @@ header {
 /* style the footer , plan for responsiveness */
 
 footer{
-    position: relative;
-    bottom: 0;
-    left: 0;
-    right: 0;
+    position: relative;   
     background: #111;
     height: auto;
     padding-top: 0px;
@@ -97,9 +96,18 @@ footer{
     align-items: center;   
     font-family: "Raleway", sans-serif;
     font-size: 1em;
-    height:2em ;
+    height:3em ;
     border-radius: 10px;
 }
+#player-choice button:hover:not([disabled]){
+    background-color: blue;
+    color: white;    
+}
+
+#game-message {
+    align-items: center;
+}
+
 
 @media (max-width: 414px) {
     #player-choice {
