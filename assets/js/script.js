@@ -57,7 +57,7 @@ function runGame(playerChoice){
     //Next get the computer choice, random number between 0 and 4
     let computerChoice = Math.floor(Math.random()*5);
     
-    //next change the computer image to refelct the computer selection
+    //next change the computer image to reflect the computer selection
     computerImage.src = `assets/images/${options[computerChoice]}.PNG`;
     computerImage.style.width = '160px';
     computerImage.style.height = '180px';
@@ -71,7 +71,7 @@ function runGame(playerChoice){
             winnerMessage.innerHTML = 'Its a tie, please play again';
             winnerMessage.style.color = 'orange';
         } else if (result == 1){  // Player wins
-            winnerMessage.innerHTML = 'Player wins !';
+            winnerMessage.innerHTML = 'Player wins !  ' + options[playerChoice] + ' beats ' + options[computerChoice];
             winnerMessage.style.color = 'blue';
             //increment player score
             playerWins += 1; //increment by one because player just won this game
@@ -80,7 +80,7 @@ function runGame(playerChoice){
             gameTracker.innerHTML = currentGame;                
                 }
          else if (result == 2){  // Computer wins
-            winnerMessage.innerHTML = 'Computer wins !';
+            winnerMessage.innerHTML = 'Computer wins !  ' + options[computerChoice] + ' beats ' + options[playerChoice];
             winnerMessage.style.color = 'red';
             computerWins += 1; //increment by one because computer just won this game
             computerScore.innerText = computerWins; // write the new score to the DOM
@@ -97,7 +97,7 @@ function runGame(playerChoice){
  * This function takes the user selection and computer selection and returns a winner
  */
 function winCalc(playerChoice,computerChoice){
-    console.log('wincalc has been called,' +playerChoice + ',' + computerChoice);
+    
     
     if (playerChoice == computerChoice){ //its a tie
         return 0;
@@ -143,20 +143,26 @@ function winCalc(playerChoice,computerChoice){
 
 }
 
+/**
+ * This function closes the game, disbales the play buttons and outputs an overall winner of the best in three game
+ */
 function endgame(){
     
     //disable buttons, prevent user from continuing
     for (button of gameButtons){
-    button.setAttribute('disabled',1);}
+    button.setAttribute('disabled',1);}    
     
 
     if (playerScore.innerText > computerScore.innerText){
         overAllWinner.innerText = ' PLAYER WINS! Refresh page to continue';
         overAllWinner.style.fontSize = '2rem';
         overAllWinner.style.color = 'blue';
+        overAllWinner.style.paddingLeft = '30px';
+        
     } else {
-        overAllWinner.innerText = ' COMPUTER WINS! Refresh page to continue';
+        overAllWinner.innerText = ' YOU LOSE! Refresh page to continue';
         overAllWinner.style.fontSize = '2rem';
         overAllWinner.style.color = 'red';
+        overAllWinner.style.paddingLeft = '30px';
     }
 }

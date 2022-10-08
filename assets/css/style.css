@@ -4,7 +4,10 @@
 body{
     font-family:"Raleway", sans-serif;   
     border: 1px solid black;
-    padding-bottom: 0%;
+    min-height: 100vh; 
+    margin: 0;   
+    display: grid;
+    grid-template-rows: auto 1fr auto;    
 }
 
 
@@ -15,8 +18,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;   
-    background-color: lightslategrey;     
-   
+    background-color: lightslategrey;        
 }
 
 #myHeader {
@@ -32,10 +34,10 @@ header {
 /* style the footer , plan for responsiveness */
 
 footer{
-    position: relative;   
+    position: relative;  
+    bottom: 0; 
     background: #111;
-    height: auto;
-    padding-top: 0px;
+    height: auto;    
     color: #fff;
 }
 #myfooter h3 {
@@ -76,7 +78,9 @@ footer{
     justify-content: center;
     align-items: center;
     margin-bottom: 20px;
+    padding-top: 10px;
 }
+
 #game-heading > h2 {
     text-align: center;  
     color: lawngreen;
@@ -112,14 +116,32 @@ footer{
     color:red;
 }
 #game-message {
-    display: flex;
+   
+    height: 3rem;
+    width:100%;
     justify-content: center;
-    align-items: center;
-}
-#winner-message {
     text-align: center;
-    margin: 0 auto;
+    vertical-align: middle;
 }
+#game-message p {
+    font-size: 1.5rem;
+    color: black;
+    font-family:"Raleway",sans-serif; 
+}
+#game-tracker {
+   
+    height: auto;
+    width:100%;
+    justify-content: center;
+    text-align: center;
+    vertical-align: middle;
+}
+#game-tracker p {
+    font-size: 1.5rem;
+    color: goldenrod;
+    font-family:"Raleway",sans-serif; 
+}
+
 
 
 
@@ -130,12 +152,13 @@ footer{
         justify-content:space-evenly;
     }
     #game-heading h2 {
-        font-size: 1rem;
-        text-align: center;
+        font-size: 1.5rem;
+        text-align: center;        
     }
     #myHeader h1 {
         text-align: center;
         font-size: 2rem;
+        
     }
     #myfooter h3 {
         font-size: 1rem;
@@ -144,5 +167,6 @@ footer{
     #myfooter p {
         font-size: 0.8rem;
         text-align: left;
+        padding-left: 5px;
     }
 }
