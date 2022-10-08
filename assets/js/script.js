@@ -88,6 +88,7 @@ function runGame(playerChoice){
             gameTracker.innerHTML = currentGame;            
         }
         if(currentGame == gameCount.innerHTML){
+            winnerMessage.innerHTML = 'GAME OVER';
             endgame();}
 
 }
@@ -103,7 +104,6 @@ function winCalc(playerChoice,computerChoice){
     } else if (playerChoice == 0){  // Player selects rock
         if (computerChoice == 2 || computerChoice == 3){
             return 1; // Player wins
-
         }
         else{
             return 2; //Computer wins
@@ -129,8 +129,8 @@ function winCalc(playerChoice,computerChoice){
         else{
             return 2; //Computer wins
         }
-    } else if (playerChoice == 4){  // Player selects lizard
-        if (computerChoice == 0 || computerChoice == 3){
+    } else if (playerChoice == 4){  // Player selects Spock
+        if (computerChoice == 0 || computerChoice == 2){
             return 1; // Player wins
         }
         else{
@@ -144,10 +144,11 @@ function winCalc(playerChoice,computerChoice){
 }
 
 function endgame(){
-    //alert('GameOver' + 'pLAYER SCORE IS '+playerScore.innerText + 'Computer score is ' + computerScore.innerText);
+    
     //disable buttons, prevent user from continuing
     for (button of gameButtons){
     button.setAttribute('disabled',1);}
+    
 
     if (playerScore.innerText > computerScore.innerText){
         overAllWinner.innerText = ' PLAYER WINS! Refresh page to continue';
@@ -157,6 +158,5 @@ function endgame(){
         overAllWinner.innerText = ' COMPUTER WINS! Refresh page to continue';
         overAllWinner.style.fontSize = '2rem';
         overAllWinner.style.color = 'red';
-
     }
 }

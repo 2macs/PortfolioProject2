@@ -103,10 +103,25 @@ footer{
     background-color: blue;
     color: white;    
 }
-
+#player-score {
+    font-size: 3rem;
+    color:blue;
+}
+#system-score {
+    font-size: 3rem;
+    color:red;
+}
 #game-message {
+    display: flex;
+    justify-content: center;
     align-items: center;
 }
+#winner-message {
+    text-align: center;
+    margin: 0 auto;
+}
+
+
 
 
 @media (max-width: 414px) {
