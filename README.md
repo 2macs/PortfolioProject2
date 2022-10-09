@@ -78,7 +78,7 @@ Testing
 
 ### Bugs
 
-None
+* None
 
 ## Deployment
 
@@ -97,6 +97,16 @@ This site was deployed to GITHUB pages. The steps taken were as follows;
 * Github link to project can be found here : https://github.com/2macs/PortfolioProject2
 
 ## Credits
-https://bigbangtheory.fandom.com/wiki/Rock,_Paper,_Scissors,_Lizard,_Spock 
+* https://bigbangtheory.fandom.com/wiki/Rock,_Paper,_Scissors,_Lizard,_Spock 
 
-The Lato font type was found on https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;1,300&family=Oswald&display=swap 
+* The Lato font type was found on https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;1,300&family=Oswald&display=swap 
+
+* Head First JavaScript programming, Eric Freeman.
+
+* Rock paper Scissors Lizard Spock image - https://www.google.ie/url?sa=i&url=https%3A%2F%2Fbigbangtheory.fandom.com%2Fwiki%2FRock%2C_Paper%2C_Scissors%2C_Lizard%2C_Spock&psig=AOvVaw2zbSZj43f5A2yei34Unlcj&ust=1664807277381000&source=images&cd=vfe&ved=2ahUKEwjMta_E4MH6AhUORhoKHXuABdIQr4kDegUIARCuAg .
+
+* https://www.geeksforgeeks.org/ .
+
+* HTML and CSS, Bryant Parks.
+
+* Master HTML and CSS, Reynaldo Branch.
