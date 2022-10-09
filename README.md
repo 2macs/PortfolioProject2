@@ -92,9 +92,9 @@ This site was deployed to GITHUB pages. The steps taken were as follows;
 
 * Select Branch - main from dropdown
 
-* Live link to site can be found here : https://2macs.github.io/ProjectPortfolio1/
+* Live link to site can be found here : https://2macs.github.io/PortfolioProject2/
 
-* Github link to project can be found here : https://github.com/2macs/ProjectPortfolio1
+* Github link to project can be found here : https://github.com/2macs/PortfolioProject2
 
 ## Credits
 https://bigbangtheory.fandom.com/wiki/Rock,_Paper,_Scissors,_Lizard,_Spock 
