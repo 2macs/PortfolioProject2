@@ -32,7 +32,7 @@ main();
  */
 function main() {
 
-    for (button of gameButtons) {
+    for (var button of gameButtons) {
         button.addEventListener('click', function () {
             let playerChoice = this.getAttribute('data-pick');
             if (currentGame < gameCount.innerHTML) {

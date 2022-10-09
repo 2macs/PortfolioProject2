@@ -37,6 +37,17 @@ Include an option to play the computer or play against another human player.
 Search for more colourful images to represent the indivbidual options ( Rock paper scissors etc.) , currently these images are grey. 
 
 ## Testing
+HTML
+
+* No errors were returned when passing through the official W3C validator
+
+CSS
+
+* No errors were returned when passing through the official Jigsaw validator
+
+
+
+
 ### Bugs
 ### Validator Testing
 ## Deployment
