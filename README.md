@@ -13,7 +13,29 @@ Once the player clicks / selects an option the Game starts and the various score
 ![](assets/images/gameover.PNG)
 
 ## Game Play 
+To start the game the player selects an option by clicking on one of the game buttons. This then triggers the computer to make a random selection of options. The game logic then compares the player selection against the computer selection and decides a winner according to the following rules;
+
+•	Scissors cuts paper –  scissors wins.
+•	paper covers rock – paper wins.
+•	rock crushes lizard – rock wins.
+•	lizard poisons Spock – lizard wins.
+•	Spock smashes scissors – spock wins.
+•	scissors decapitates lizard – scissors wins. 
+•	lizard eats paper – lizard wins.
+•	Paper disproves Spock – Paper wins
+•	Spock vaporizes rock – spock wins. 
+•	Rock crushes scissors – rock wins.
+
+Each time the player or computer wins the corresponding score is updated and a message appears in the message area below the graphics. Also, the images change to reflect the player and computer selections. The game is best of three, ties do not count, so if a round is tied the player can select another option and go again. 
+
+Once best of three has been achieved, a message appears under the header informing the player as to who the match, the game play buttons are disabled to prevent further selections from being made. To restart the game, the player can either click the refresh button on screen or click the browser refresh button. 
+
+The game can also be played on small screens however the hover feature does not work on mobile screens as it is not expected that these units will use a mouse to pass over a button prior to selection. 
+
 ## Future Enhancements
+Include an option to play the computer or play against another human player.
+Search for more colourful images to represent the indivbidual options ( Rock paper scissors etc.) , currently these images are grey. 
+
 ## Testing
 ### Bugs
 ### Validator Testing
