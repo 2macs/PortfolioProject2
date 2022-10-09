@@ -6,11 +6,11 @@ The goal of this webpage is to enable a player to play Rock Paper Scissors Lizar
 ## Site Features
 The game is played on a single webpage. On accessing the webpage the player is presented with the game play area and a series of buttons. Each button represents Rock - Paper etc. The page consists of a header, beneath the header is a message area, this message area informs the player to make a choice / selection by clicking on one of the game play buttons. When the user hovers over a game play button the colour of the button and associated text changes to provide feedback to the player confirming their choice. The game play area also consists of 2 images , the default image is the same for both the player and computer at game start. The player score and computer score are set to 0. Below the game play area is a message area which tells the player who has won each individual play, this area is blank at game start. Beneath the message area is another message area which informs the player how the game is progressing with respect to the standard 'Best of 3' game play. This area is set to 0 of 3 at start up. Finally there is a footer that displays the rules of the game to the player. Finally, a refresh button is provided which enables the player to restart the game at any point - note, pressing refresh on the browser achieves the same result. 
 
-![](/assets/images/homePage.PNG)
+!['start screen'](/assets/images/homePage.PNG)
 
 Once the player clicks / selects an option the Game starts and the various score area update. At the end of the game ( when 3 valid games - no ties have occurred  ) a winning message is displayed , the palyer buttons are disabled and the player can then either click the Refresh button on screen or the refresh button on ht ebrowser to restart the game.
 
-![](assets/images/gameover.PNG)
+!['game screen'](assets/images/gameover.PNG)
 
 ## Game Play 
 To start the game the player selects an option by clicking on one of the game buttons. This then triggers the computer to make a random selection of options. The game logic then compares the player selection against the computer selection and decides a winner according to the following rules;
@@ -45,12 +45,40 @@ CSS
 
 * No errors were returned when passing through the official Jigsaw validator
 
+JS
 
+* No errors were returned by JShint
 
+* On loading game page, message appears in green font to click button to make choice - passed.
+* On loading the game the 5 game play are active and clickable - passed.
+* Hover over game buttons - background changes to blue, font colour changes to white - passed.
+* On loading page , Player score is set to zero - passed. 
+* On loading page , computer score is set to zero - passed. 
+* On loading page , game result area is blank - passed. 
+* On loading page , best of three area is 0 of 3 - passed. 
+* On loading page , refresh button is visible and clickable - passed. 
+* On loading page , footer is black and displays the game rules - passed. 
+* Click on player buttons, image changes to specific selection - passed.
+* Computer image changes to reflect the computer selection - passed. 
+* If player wins, player score increments by one - passed.
+* If player wins, message appears to reflect player win - passed.
+* If computer wins, computer score increments by one - passed.
+* If computer wins, message appears to reflect computer win - passed.
+* If game is tied, message appears, game total does not increment - passed.
+* If game not tied, it is valid, game total increments by one - passed.
+* When 3 valid games occur, message at top of screen proclaims the winner - passed.
+* When 3 valid games occur, game buttons are disabled - passed.
+* When 3 valid games occur, message under game area states GAME OVER - passed.
+* Refresh button on screen returns screen to loading page state - passed.
+* Browser refresh button returns screen to loading page state - passed. 
+* All above tests work in responsive mode, except hover - passed.
 
 ### Bugs
-### Validator Testing
+
+None
+
 ## Deployment
+
 ## Credits
 https://bigbangtheory.fandom.com/wiki/Rock,_Paper,_Scissors,_Lizard,_Spock 
 
