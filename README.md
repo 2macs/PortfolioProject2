@@ -33,8 +33,9 @@ Once best of three has been achieved, a message appears under the header informi
 The game can also be played on small screens however the hover feature does not work on mobile screens as it is not expected that these units will use a mouse to pass over a button prior to selection. 
 
 ## Future Enhancements
-Include an option to play the computer or play against another human player.
-Search for more colourful images to represent the indivbidual options ( Rock paper scissors etc.) , currently these images are grey. 
+* Include an option to play the computer or play against another human player.
+
+* Search for more colourful images to represent the indivbidual options ( Rock paper scissors etc.) , currently these images are grey. 
 
 ## Testing
 HTML
@@ -48,6 +49,8 @@ CSS
 JS
 
 * No errors were returned by JShint
+
+Testing 
 
 * On loading game page, message appears in green font to click button to make choice - passed.
 * On loading the game the 5 game play are active and clickable - passed.
@@ -78,6 +81,20 @@ JS
 None
 
 ## Deployment
+
+This site was deployed to GITHUB pages. The steps taken were as follows;
+
+* In the GitHub repository, navigate to the Settings tab
+
+* Click Pages on left sidebar.
+
+* Under Build and Deployment , ensure Source dropdown says Deploy from a branch.
+
+* Select Branch - main from dropdown
+
+* Live link to site can be found here : https://2macs.github.io/ProjectPortfolio1/
+
+* Github link to project can be found here : https://github.com/2macs/ProjectPortfolio1
 
 ## Credits
 https://bigbangtheory.fandom.com/wiki/Rock,_Paper,_Scissors,_Lizard,_Spock 
