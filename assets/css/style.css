@@ -149,6 +149,12 @@ footer{
     color: goldenrod;
     font-family:"Raleway",sans-serif; 
 }
+@media (max-width: 980px) {
+    #player-choice {
+        width: 100%;
+        justify-content:space-evenly;
+    }
+}
 
 @media (max-width: 414px) {
     #player-choice {
